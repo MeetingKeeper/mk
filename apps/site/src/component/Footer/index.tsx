@@ -17,6 +17,7 @@ const Footer = () => {
                   const { id, href, text } = item;
                   return (
                     <a
+                      key={id}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group cursor-pointer"
