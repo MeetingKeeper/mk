@@ -38,3 +38,6 @@ testem.log
 .DS_Store
 Thumbs.db
 /apps/site/deploy/cdk.context.json
+
+# Next.js
+.next
