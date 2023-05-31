@@ -39,3 +39,4 @@ yarn-error.log*
 /apps/site/.open-next/
 /apps/site/.next/
 /data/
+/apps/site/.turbo/
