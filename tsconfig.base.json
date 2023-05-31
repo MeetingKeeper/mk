@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@pm/database": ["libs/database/src/index.ts"],
+      "@pm/database/server": ["libs/database/src/server.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
