@@ -1,12 +1,15 @@
 import { adapter, providers } from '@pm/auth';
 import NextAuth from 'next-auth';
 
-const handler = NextAuth({
+export const authOptions = {
   providers,
   adapter,
   pages: {
     signIn: '/auth/login',
   }
-})
+}
+
+const handler = NextAuth(authOptions)
 
 export { handler as GET, handler as POST };
+
