@@ -1,7 +1,6 @@
 "use client";
 
 import Sidebar from "@/component/Layouts/Sidebar";
-import "../../styles/tailwind.css";
 import { useTheme } from "@/contexts/theme";
 
 export default function Layout({ children }) {
