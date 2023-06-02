@@ -1,8 +1,8 @@
 "use client";
-
 import Image from "next/image";
 import appConfig from "../../../app.config";
 import useLogin from "./useLogin";
+
 
 export default function Layout({ children }) {
   const { onGoogleLogin } = useLogin();

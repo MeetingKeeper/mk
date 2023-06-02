@@ -1,14 +1,12 @@
-"use client";
-
 import Link from "next/link";
 
-export default function SignUp() {
+export default function LoginPage() {
   return (
     <p className="text-center">
-      You already have an account? &nbsp;
-      <Link href="/auth/login">
+      Dont&apos;t have an account? &nbsp;
+      <Link href="/auth/register">
         <span className="font-bold text-primary hover:underline ltr:ml-1 rtl:mr-1">
-          Login
+          Sign Up
         </span>
       </Link>
     </p>

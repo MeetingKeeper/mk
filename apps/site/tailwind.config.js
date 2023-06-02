@@ -6,14 +6,15 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/component/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
-    screens: {
-      sm: "575px",
-      md: "768px",
-      lg: "1025px",
-      xl: "1202px",
-    },
+    // screens: {
+    //   sm: "575px",
+    //   md: "768px",
+    //   lg: "1025px",
+    //   xl: "1202px",
+    // },
     fontFamily: {
       display: ['"CalSans-SemiBold"', "sans-serif"],
       body: ['"DM Sans"', "sans-serif"],

@@ -12,6 +12,7 @@
     "prettier:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
+    "@pm/auth": "*",
     "@t3-oss/env-nextjs": "^0.3.1",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/line-clamp": "^0.4.4",
@@ -24,11 +25,13 @@
     "eslint-config-next": "13.4.4",
     "next": "13.4.4",
     "postcss": "8.4.24",
+    "prettier-plugin-tailwindcss": "^0.3.0",
     "react": "18.2.0",
+    "react-animate-height": "^3.1.1",
     "react-dom": "18.2.0",
+    "react-perfect-scrollbar": "^1.5.8",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4",
-    "zod": "^3.21.4",
-    "@pm/auth": "*"
+    "zod": "^3.21.4"
   }
 }
