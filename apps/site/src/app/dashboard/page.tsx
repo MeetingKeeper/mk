@@ -1,6 +1,15 @@
 import Link from "next/link";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { redirect } from "next/navigation";
 
-export default function LoginPage() {
+export default async function DashboardPage() {
+  const session = await getServerSession(authOptions)
+
+  if (!session) {
+    return redirect("/");
+  }
+
   return (
     <p className="text-center">
       Dont&apos;t have an account? &nbsp;

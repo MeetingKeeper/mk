@@ -4,11 +4,16 @@ import Link from "next/link"
 import Dropdown from "../Dropdown"
 import { useTheme } from "@/contexts/theme"
 import Image from "next/image"
-import { useSession } from "next-auth/react"
+import { useSession, signOut } from "next-auth/react"
 
 const Header = () => {
-  const { theme: themeConfig, toggleSidebar } = useTheme()
-  const { data: session } = useSession()
+  const { theme: themeConfig, toggleSidebar } = useTheme();
+  const { data: session, status } = useSession();
+  const onLogout = async () => {
+    await signOut({ callbackUrl: "/" });
+  }
+
+  if (status === "loading") return null;
 
   return (
     <header className={themeConfig.semiDark && themeConfig.menu === "horizontal" ? "dark" : ""}>
@@ -97,7 +102,7 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="border-t border-white-light dark:border-white-light/10">
-                    <button className="!py-3 text-danger">
+                    <button className="!py-3 text-danger" onClick={onLogout}>
                       <svg
                         className="rotate-90 ltr:mr-2 rtl:ml-2"
                         width="18"
