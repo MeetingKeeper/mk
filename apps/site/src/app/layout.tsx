@@ -1,3 +1,5 @@
+// Perfect Scrollbar
+import 'react-perfect-scrollbar/dist/css/styles.css';
 import "./globals.css";
 import { Inter } from "next/font/google";
 import appConfig from "../../app.config";
@@ -17,9 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark" dir="ltr">
-    <body className={`${inter.className} bg-white dark:bg-black`}>
-    <NextAuthProvider>{children}</NextAuthProvider>
-    </body>
+      <body className={`${inter.className} bg-white dark:bg-black`}>
+        <NextAuthProvider>{children}</NextAuthProvider>
+      </body>
     </html>
   );
 }

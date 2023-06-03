@@ -1,7 +1,7 @@
-import Intro from "@/component/intro";
-import ComingSoon from "@/component/ComingSoon";
-import Footer from "@/component/Footer";
-import Header from "@/component/Header";
+import Intro from "@/components/intro";
+import ComingSoon from "@/components/ComingSoon";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "./api/auth/[...nextauth]/route"
 import { redirect } from 'next/navigation';

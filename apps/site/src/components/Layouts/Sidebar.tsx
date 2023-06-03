@@ -25,14 +25,14 @@ const Sidebar = () => {
         <div className="h-full bg-white dark:bg-black">
           <div className="flex items-center justify-between px-4 py-3">
             <Link href="/" className="main-logo flex shrink-0 items-center">
-              <Image className="ml-[5px] w-8 flex-none" src="/assets/images/logo-face.svg" alt="logo" width={10}
-                     height={10} />
+              <Image className="ml-[5px] w-8 flex-none" src="/assets/images/logo-face.svg" alt="logo" width={20}
+                     height={20} />
               <span
-                className="align-middle text-1xl font-semibold ltr:ml-1.5 rtl:mr-1.5 dark:text-white-light lg:inline">{appConfig.name}</span>
+                className="align-middle text-[1.2rem] font-semibold ltr:ml-1.5 rtl:mr-1.5 dark:text-white-light lg:inline">{appConfig.name}</span>
             </Link>
             <button
               type="button"
-              className="collapse-icon flex h-8 w-8 items-center rounded-full transition duration-300 hover:bg-gray-500/10 rtl:rotate-180 dark:text-white-light dark:hover:bg-dark-light/10"
+              className=" collapse-icon flex h-8 w-8 items-center rounded-full transition duration-300 hover:bg-gray-500/10 rtl:rotate-180 dark:text-white-light dark:hover:bg-dark-light/10"
               onClick={() => toggleSidebar()}
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ const Sidebar = () => {
           <PerfectScrollbar className="relative h-[calc(100vh-80px)]">
             <ul className="relative space-y-0.5 p-4 py-0 font-semibold">
               <li className="nav-item">
-                <Link href="/dashboard" className="group">
+                <Link href="/dashboard" className="group active"  >
                   <div className="flex items-center">
                     <svg className="group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
