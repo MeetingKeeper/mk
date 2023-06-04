@@ -6,16 +6,16 @@ import Image from "next/image";
 import appConfig from "../../../app.config";
 import { useTheme } from "@/contexts/theme";
 import { useEffect } from "react";
+// import { useTheme } from "@/contexts/theme";
+// import { useEffect } from "react";
 
 const Sidebar = () => {
   const { theme: themeConfig, toggleSidebar } = useTheme();
-
   useEffect(() => {
     if (window.innerWidth < 1024 && themeConfig.sidebar) {
       toggleSidebar();
     }
   }, []);
-
 
   return (
     <div className="relative">

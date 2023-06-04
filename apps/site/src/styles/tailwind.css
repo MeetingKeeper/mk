@@ -1,3 +1,6 @@
+/* quill-editor css */
+@import './quill-editor.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,7 +20,8 @@
 
   /* Panel */
   .panel {
-    @apply shadow relative rounded-md bg-white p-5 dark:bg-black;
+    @apply  relative rounded-md bg-white p-5 dark:bg-black;
+    /*shadow*/
   }
   /* Navbar */
   .navbar-sticky header,

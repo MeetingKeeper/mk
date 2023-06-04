@@ -6,6 +6,7 @@ import Header from "@/components/Layouts/Header";
 
 export default function Layout({ children }) {
   const { theme } = useTheme();
+
   return (
     <div className={`${(!theme.sidebar && 'toggle-sidebar') || ''} vertical full ltr main-section relative font-nunito text-sm font-normal antialiased`}>
       <div className="relative h-full">

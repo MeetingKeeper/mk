@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark" dir="ltr">
+    <html lang="en" className="dark" dir="ltr" suppressHydrationWarning={true}>
       <body className={`${inter.className} bg-white dark:bg-black`}>
         <NextAuthProvider>{children}</NextAuthProvider>
       </body>

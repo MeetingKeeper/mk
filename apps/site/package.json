@@ -11,29 +11,33 @@
     "prettier": "prettier --check \"**/*.{js,jsx,ts,tsx}\"",
     "prettier:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\""
   },
-  "dependencies": {
-    "@pm/auth": "*",
-    "@popperjs/core": "^2.11.8",
-    "@t3-oss/env-nextjs": "^0.3.1",
+  "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "20.2.5",
-    "@types/react": "18.2.7",
-    "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
-    "next": "13.4.4",
     "postcss": "8.4.24",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "react": "18.2.0",
+    "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "@pm/auth": "*",
+    "@popperjs/core": "^2.11.8",
+    "@t3-oss/env-nextjs": "^0.3.1",
+    "@types/react": "18.2.7",
+    "@types/react-dom": "18.2.4",
+    "next": "^13.4.4",
+    "react": "^18.2.0",
     "react-animate-height": "^3.1.1",
     "react-dom": "18.2.0",
     "react-perfect-scrollbar": "^1.5.8",
     "react-popper": "^2.3.0",
+    "react-quill": "^2.0.0",
+    "sharp": "^0.32.1",
     "tailwindcss": "3.3.2",
-    "typescript": "5.0.4",
     "zod": "^3.21.4"
   }
 }
