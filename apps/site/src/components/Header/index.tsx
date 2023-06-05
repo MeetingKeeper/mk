@@ -27,7 +27,7 @@ const Header = () => {
         </Link>
         <div className="flex-grow flex-1"></div>
         <div className="flex flex-row items-center space-x-4">
-          <button className="text-white outline" onClick={() => signIn()}>Login</button>
+          <button className="text-white" onClick={() => signIn()}>Login</button>
         </div>
       </div>
     </header>
