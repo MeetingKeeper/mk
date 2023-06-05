@@ -14,10 +14,10 @@ const PageForm = () => {
             theme="snow"
             value={"Test"}
             defaultValue={"Test"}
-            style={{ height: "100%" }}
+            style={{ height: '90%' }}
           />
         </div>
-        <div>
+        <div className="mt-5 md:mt-0">
           <input
             type="file"
             className="form-input p-0 file:border-0 file:bg-primary/90 file:px-4 file:py-2 file:font-semibold file:text-white file:hover:bg-primary ltr:file:mr-5 rtl:file:ml-5"
