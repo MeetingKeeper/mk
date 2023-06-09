@@ -1,0 +1,12 @@
+{
+  "name": "@pm/lib",
+  "version": "0.0.0",
+  "description": "PlanMeet Lib Library",
+  "main": "index.ts",
+  "types": "index.d.ts",
+  "author": "durga@planmeet.ai",
+  "private": true,
+  "dependencies": {
+
+  }
+}
