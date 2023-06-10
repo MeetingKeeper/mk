@@ -1,0 +1,11 @@
+{
+  "name": "@pm/ai",
+  "private": true,
+  "description": "Shared AI library for PlanMeet.ai",
+  "authors": "durga",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "langchain": "^0.0.92"
+  }
+}
