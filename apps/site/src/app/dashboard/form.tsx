@@ -4,6 +4,7 @@ import ReactQuill from "@/components/Editor"
 import React from "react"
 import "react-quill/dist/quill.snow.css"
 import { api } from "@pm/trpc/client";
+import Tippy from "@tippyjs/react";
 // Action-oriented summary: This type of summary focuses on capturing the action items and decisions made during the meeting. It includes a list of tasks assigned to individuals, deadlines, and responsibilities.
 //
 //   Discussion-based summary: This summary highlights the key points discussed during the meeting. It includes a summary of each agenda item, major ideas or arguments put forward, and any conclusions or recommendations reached.
@@ -68,8 +69,8 @@ const PageForm = () => {
               <ReactQuill
                 // @ts-ignore
                 theme="snow"
-                value={"Test"}
-                defaultValue={"Test"}
+                value={""}
+                defaultValue={""}
                 style={{ height: '90%' }}
               />
             </div>
@@ -85,43 +86,92 @@ const PageForm = () => {
             <div className="mt-8 flex flex-row flex-wrap gap-3 text-center ">
               <label className="inline-flex cursor-pointer">
                 <input type="checkbox" className="form-checkbox" defaultChecked />
-                <span className="pt-0.5">Informative Summary</span>
+                <span className="pt-0.5 mr-1">Informative Summary</span>
+                <Tippy content="An informative summary provides a comprehensive and objective overview of the main points and details of a topic or document.">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-0.5 mr-2">
+                    <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M12 17V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)" fill="currentColor"/>
+                  </svg>
+                </Tippy>
               </label>
               <label className="inline-flex cursor-pointer">
                 <input type="checkbox" className="form-checkbox" defaultChecked />
-                <span className="pt-0.5">Decision-Making Summary</span>
+                <span className="pt-0.5 mr-1">Decision-Making Summary</span>
+                <Tippy content="A decision-making summary presents relevant information and analysis to support the process of making informed decisions.">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-0.5 mr-2">
+                    <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M12 17V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)" fill="currentColor"/>
+                  </svg>
+                </Tippy>
+              </label>
+              {/*<label className="inline-flex cursor-pointer">*/}
+              {/*  <input type="checkbox" className="form-checkbox" defaultChecked />*/}
+              {/*  <span className="pt-0.5">Problem-Solving Summary</span>*/}
+              {/*</label>*/}
+              <label className="inline-flex cursor-pointer">
+                <input type="checkbox" className="form-checkbox" defaultChecked />
+                <span className="pt-0.5 mr-1">Action-oriented summary</span>
+                <Tippy content="An action-oriented summary outlines specific steps, recommendations, or actions that need to be taken based on the information provided.">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-0.5 mr-2">
+                    <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M12 17V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)" fill="currentColor"/>
+                  </svg>
+                </Tippy>
+              </label>
+              {/*<label className="inline-flex cursor-pointer">*/}
+              {/*  <input type="checkbox" className="form-checkbox" defaultChecked />*/}
+              {/*  <span className="pt-0.5">Comparative Summary</span>*/}
+              {/*</label>*/}
+              <label className="inline-flex cursor-pointer">
+                <input type="checkbox" className="form-checkbox" defaultChecked />
+                <span className="pt-0.5 mr-1">Minutes of meeting</span>
+                <Tippy content="Minutes of meeting capture the essential discussions, decisions, and action items from a meeting.">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-0.5 mr-2">
+                    <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M12 17V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)" fill="currentColor"/>
+                  </svg>
+                </Tippy>
+              </label>
+              <label className="flex flex-row justify-center cursor-pointer">
+                <input type="checkbox" className="form-checkbox" defaultChecked />
+                <span className="pt-0.5 mr-1">Brief summary</span>
+                <Tippy content="A brief summary is a concise statement or overview that captures the key points or main ideas of a longer piece of content, such as an article, report, or book.">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-0.5 mr-2">
+                    <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M12 17V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)" fill="currentColor"/>
+                  </svg>
+                </Tippy>
+              </label>
+              {/*<label className="inline-flex cursor-pointer">*/}
+              {/*  <input type="checkbox" className="form-checkbox" defaultChecked />*/}
+              {/*  <span className="pt-0.5">Progress summary</span>*/}
+              {/*</label>*/}
+              <label className="inline-flex cursor-pointer">
+                <input type="checkbox" className="form-checkbox" defaultChecked />
+                <span className="pt-0.5 mr-1">Executive summary</span>
+                <Tippy content="An executive summary is a condensed version of a report or proposal that provides an overview of the key findings, recommendations, and outcomes.">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-0.5 mr-2">
+                    <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M12 17V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)" fill="currentColor"/>
+                  </svg>
+                </Tippy>
               </label>
               <label className="inline-flex cursor-pointer">
                 <input type="checkbox" className="form-checkbox" defaultChecked />
-                <span className="pt-0.5">Problem-Solving Summary</span>
-              </label>
-              <label className="inline-flex cursor-pointer">
-                <input type="checkbox" className="form-checkbox" defaultChecked />
-                <span className="pt-0.5">Action-oriented summary</span>
-              </label>
-              <label className="inline-flex cursor-pointer">
-                <input type="checkbox" className="form-checkbox" defaultChecked />
-                <span className="pt-0.5">Comparative Summary</span>
-              </label>
-              <label className="inline-flex cursor-pointer">
-                <input type="checkbox" className="form-checkbox" defaultChecked />
-                <span className="pt-0.5">Minutes of meeting</span>
-              </label>
-              <label className="inline-flex cursor-pointer">
-                <input type="checkbox" className="form-checkbox" defaultChecked />
-                <span className="pt-0.5">Brief summary</span>
-              </label>
-              <label className="inline-flex cursor-pointer">
-                <input type="checkbox" className="form-checkbox" defaultChecked />
-                <span className="pt-0.5">Progress summary</span>
-              </label>
-              <label className="inline-flex cursor-pointer">
-                <input type="checkbox" className="form-checkbox" defaultChecked />
-                <span className="pt-0.5">Executive summary</span>
-              </label>
-              <label className="inline-flex cursor-pointer">
-                <input type="checkbox" className="form-checkbox" defaultChecked />
-                <span className="pt-0.5">Key takeaways or highlights</span>
+                <span className="pt-0.5 mr-1">Key takeaways or highlights</span>
+                <Tippy content="Key takeaways or highlights are the main points or key lessons learned from a piece of content, often presented in a concise format.">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-0.5 mr-2">
+                    <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M12 17V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)" fill="currentColor"/>
+                  </svg>
+                </Tippy>
               </label>
             </div>
           </div>

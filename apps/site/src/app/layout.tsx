@@ -1,19 +1,17 @@
-"use client";
-
 // Perfect Scrollbar
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import "./globals.css";
+import "tippy.js/dist/tippy.css";
 import { Inter } from "next/font/google";
-import appConfig from "../../app.config";
 import { NextAuthProvider } from "@/providers";
-import { trpc } from "@pm/trpc/react";
+import appConfig from "../../app.config";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// export const metadata = {
-//   title: appConfig.name,
-//   description: appConfig.description
-// };
+export const metadata = {
+  title: appConfig.name,
+  description: appConfig.description
+};
 
 function RootLayout({
                                      children
