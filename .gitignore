@@ -40,3 +40,5 @@ yarn-error.log*
 /apps/site/.next/
 /data/
 /apps/site/.turbo/
+/apps/chrome/dist/
+/apps/chrome/build/

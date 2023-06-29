@@ -27,8 +27,7 @@ function getSummary(prompt: string, docs: Document[]) {
   const chain = loadSummarizationChain(model, {
     type: 'map_reduce',
     combinePrompt,
-    combineMapPrompt: mapPrompt,
-  });
+    combineMapPrompt: mapPrompt,  });
   return chain.call({
     input_documents: docs,
   });

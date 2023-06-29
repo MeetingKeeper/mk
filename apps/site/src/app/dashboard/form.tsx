@@ -5,21 +5,6 @@ import React from "react"
 import "react-quill/dist/quill.snow.css"
 import { api } from "@pm/trpc/client";
 import Tippy from "@tippyjs/react";
-// Action-oriented summary: This type of summary focuses on capturing the action items and decisions made during the meeting. It includes a list of tasks assigned to individuals, deadlines, and responsibilities.
-//
-//   Discussion-based summary: This summary highlights the key points discussed during the meeting. It includes a summary of each agenda item, major ideas or arguments put forward, and any conclusions or recommendations reached.
-//
-//   Minutes of meeting: Minutes are a detailed record of the proceedings of a meeting. They typically include information about attendees, a summary of discussions, decisions made, and any other relevant information such as reports or presentations.
-//
-//   Brief summary: A brief summary provides a condensed overview of the meeting without going into excessive detail. It focuses on the main topics covered, decisions made, and any important action items.
-//
-//   Progress summary: This type of summary is often used for recurring or project-based meetings. It highlights the progress made since the last meeting, identifies any challenges or issues encountered, and provides an update on the overall status of the project or initiative.
-//
-//   Executive summary: An executive summary is a concise summary designed for busy executives or high-level stakeholders who may not have the time to read through detailed meeting notes. It provides a brief overview of the main topics discussed, decisions made, and any action items requiring their attention.
-//
-//   Key takeaways or highlights: This type of summary focuses on the key takeaways or highlights from the meeting. It distills the most important points and captures the main outcomes or decisions made during the meeting.
-
-
 const PageForm = () => {
   const onGenerate = async () => {
     const result = await api.viewer.summary.mutate({ text: "Customer: Good morning! We're here to discuss our tax matters. We've brought all the necessary documents and receipts.\n" +
@@ -56,6 +41,7 @@ const PageForm = () => {
         "\n" +
         "Account Manager 2: You're most welcome. We value your trust in our firm, and we'll do our best to exceed your expectations. We'll eagerly await your contact and prepare for our next meeting. Have a great day!" });
     console.log(result);
+
   }
   return (
     <>
