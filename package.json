@@ -15,8 +15,18 @@
   },
   "name": "planmeet",
   "packageManager": "yarn@1.22.19",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react-native",
+      "**/react-native/**",
+      "**/electron",
+      "**/electron/**",
+      "**/jest",
+      "**/jest/**"
+    ]
+  }
 }
