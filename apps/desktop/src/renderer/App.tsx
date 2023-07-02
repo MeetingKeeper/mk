@@ -1,14 +1,19 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import icon from '../../assets/icon.svg';
+import 'tailwindcss/tailwind.css';
+import '@pm/styles/globals.css';
+import "@pm/styles/tailwind.css";
 import './App.css';
+import { ThemeProvider } from '@pm/ui/contexts/theme';
+import Dashboard from "./pages/Dashboard";
 
 function Hello() {
   return (
-    <div>
-      <div className="Hello">
+    <div className="bg-black">
+      <div className="vertical full ltr main-section relative font-nunito text-sm font-normal antialiased">
         <img width="200" alt="icon" src={icon} />
       </div>
-      <h1>electron-react-boilerplate</h1>
+      <h1 className="bg-black">electron-react-boilerplate</h1>
       <div className="Hello">
         <a
           href="https://electron-react-boilerplate.js.org/"
@@ -41,10 +46,12 @@ function Hello() {
 
 export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Hello />} />
-      </Routes>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Dashboard> Hello </Dashboard>} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
