@@ -2,6 +2,7 @@ import { app } from 'electron';
 import serve from 'electron-serve';
 import { createWindow } from './helpers';
 
+
 const isProd: boolean = process.env.NODE_ENV === 'production';
 
 if (isProd) {
@@ -16,7 +17,12 @@ if (isProd) {
   const mainWindow = createWindow('main', {
     width: 1000,
     height: 600,
-    // fullscreen: true,
+    fullscreen: true,
+    webPreferences: {
+      // preload: join(__dirname, '../preload/index.js'),
+      sandbox: false,
+      nodeIntegration: true
+    }
   });
 
   if (isProd) {
@@ -31,3 +37,5 @@ if (isProd) {
 app.on('window-all-closed', () => {
   app.quit();
 });
+
+

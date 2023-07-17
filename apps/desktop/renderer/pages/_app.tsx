@@ -6,6 +6,8 @@ import '@pm/styles/tailwind.css';
 import '../styles/globals.css';
 import Layout from '../components/Layouts';
 
+import Error from './_error';
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>

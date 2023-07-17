@@ -11,6 +11,7 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
+    "@tech9app/whisper.js": "^1.0.15",
     "@turbo/gen": "^1.10.7",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.1.0",
@@ -18,6 +19,8 @@
     "turbo": "^1.10.7"
   },
   "devDependencies": {
+    "@pm/styles": "*",
+    "@pm/ui": "*",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
     "autoprefixer": "^10.4.7",
@@ -29,8 +32,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.1.8",
-    "typescript": "^4.9.4",
-    "@pm/styles": "*",
-    "@pm/ui": "*"
+    "typescript": "^4.9.4"
   }
 }
